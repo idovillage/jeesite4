@@ -80,7 +80,7 @@ JeeSite 自开源以来已被广大爱好者用到了企业、政府、医疗、
 
 Eclipse： 在web项目上右键，选择菜单 -> Maven -> Update Project...（或按Alt+F5） -> 点击 Select All 按钮 -> 选择 Force Update of Snapshots/Releases 复选框 -> 点击OK按钮即可
 
-# Git 全局设置技巧-by idovillage
+# Git 全局设置技巧
 
 ```
 1、提交检出均不转换换行符
