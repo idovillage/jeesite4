@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping(value="${adminPath}/state/ehcache")
 public class EhCacheController {
 
-	@RequiresPermissions("stste:ehcache")
+	@RequiresPermissions("sys:stste:ehcache")
 	@RequestMapping(value="")
 	public String index(Model model){
-		model.addAttribute("message", "敬请期待！");
+		model.addAttribute("message", "正在研发中，敬请期待！");
 		return "modules/state/ehcacheIndex";
 	}
 	
