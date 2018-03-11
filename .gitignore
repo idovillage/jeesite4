@@ -4,20 +4,4 @@
 **/target
 **/webapp/userfiles
 **/WEB-INF/classes
-<<<<<<< HEAD
 **/logs/log*.log
-=======
-**/logs/log*.log
-
-.classpath
-.project
-
-.idea
-*.ipr
-*.iml
-*.iws
-*.lic
-
-.DS_Store
-Thumbs.db
->>>>>>> upstream/master
