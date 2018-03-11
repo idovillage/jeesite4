@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 /* Drop Indexes */
 
 DROP INDEX idx_gen_table_ptn;
@@ -6,6 +7,8 @@ DROP INDEX idx_gen_table_column_tn;
 
 
 
+=======
+>>>>>>> upstream/master
 /* Drop Tables */
 
 DROP TABLE js_gen_table_column CASCADE CONSTRAINTS;

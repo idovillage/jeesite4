@@ -1,5 +1,6 @@
 SET SESSION FOREIGN_KEY_CHECKS=0;
 
+<<<<<<< HEAD
 /* Drop Indexes */
 
 DROP INDEX idx_sys_area_pc ON js_sys_area;
@@ -126,6 +127,8 @@ DROP INDEX idx_sys_user_cc ON js_sys_user;
 
 
 
+=======
+>>>>>>> upstream/master
 /* Drop Tables */
 
 DROP TABLE IF EXISTS js_sys_company_office;
@@ -648,7 +651,7 @@ CREATE TABLE js_sys_msg_template
 	module_code varchar(64) COMMENT '归属模块',
 	tpl_key varchar(100) NOT NULL COMMENT '模板键值',
 	tpl_name varchar(100) NOT NULL COMMENT '模板名称',
-	tpl_type char(1) NOT NULL COMMENT '模板类型',
+	tpl_type varchar(16) NOT NULL COMMENT '模板类型',
 	tpl_content text NOT NULL COMMENT '模板内容',
 	status char(1) DEFAULT '0' NOT NULL COMMENT '状态（0正常 1删除 2停用）',
 	create_by varchar(64) NOT NULL COMMENT '创建者',
@@ -907,12 +910,13 @@ CREATE INDEX idx_sys_job_log_e ON js_sys_job_log (job_event ASC);
 CREATE INDEX idx_sys_job_log_ie ON js_sys_job_log (is_exception ASC);
 CREATE INDEX idx_sys_lang_code ON js_sys_lang (lang_code ASC);
 CREATE INDEX idx_sys_lang_type ON js_sys_lang (lang_type ASC);
-CREATE INDEX idx_sys_log_cd ON js_sys_log (create_by ASC);
+CREATE INDEX idx_sys_log_cb ON js_sys_log (create_by ASC);
 CREATE INDEX idx_sys_log_cc ON js_sys_log (corp_code ASC);
 CREATE INDEX idx_sys_log_lt ON js_sys_log (log_type ASC);
 CREATE INDEX idx_sys_log_bk ON js_sys_log (biz_key ASC);
 CREATE INDEX idx_sys_log_bt ON js_sys_log (biz_type ASC);
 CREATE INDEX idx_sys_log_ie ON js_sys_log (is_exception ASC);
+CREATE INDEX idx_sys_log_cd ON js_sys_log (create_date ASC);
 CREATE INDEX idx_sys_menu_pc ON js_sys_menu (parent_code ASC);
 CREATE INDEX idx_sys_menu_ts ON js_sys_menu (tree_sort ASC);
 CREATE INDEX idx_sys_menu_status ON js_sys_menu (status ASC);

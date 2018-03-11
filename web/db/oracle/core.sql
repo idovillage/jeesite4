@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 /* Drop Indexes */
 
 DROP INDEX idx_sys_area_pc;
@@ -125,6 +126,8 @@ DROP INDEX idx_sys_user_cc;
 
 
 
+=======
+>>>>>>> upstream/master
 /* Drop Tables */
 
 DROP TABLE js_sys_company_office CASCADE CONSTRAINTS;
@@ -645,7 +648,7 @@ CREATE TABLE js_sys_msg_template
 	module_code varchar2(64),
 	tpl_key varchar2(100) NOT NULL,
 	tpl_name nvarchar2(100) NOT NULL,
-	tpl_type char(1) NOT NULL,
+	tpl_type varchar2(16) NOT NULL,
 	tpl_content clob NOT NULL,
 	status char(1) DEFAULT '0' NOT NULL,
 	create_by varchar2(64) NOT NULL,
@@ -904,12 +907,13 @@ CREATE INDEX idx_sys_job_log_e ON js_sys_job_log (job_event);
 CREATE INDEX idx_sys_job_log_ie ON js_sys_job_log (is_exception);
 CREATE INDEX idx_sys_lang_code ON js_sys_lang (lang_code);
 CREATE INDEX idx_sys_lang_type ON js_sys_lang (lang_type);
-CREATE INDEX idx_sys_log_cd ON js_sys_log (create_by);
+CREATE INDEX idx_sys_log_cb ON js_sys_log (create_by);
 CREATE INDEX idx_sys_log_cc ON js_sys_log (corp_code);
 CREATE INDEX idx_sys_log_lt ON js_sys_log (log_type);
 CREATE INDEX idx_sys_log_bk ON js_sys_log (biz_key);
 CREATE INDEX idx_sys_log_bt ON js_sys_log (biz_type);
 CREATE INDEX idx_sys_log_ie ON js_sys_log (is_exception);
+CREATE INDEX idx_sys_log_cd ON js_sys_log (create_date);
 CREATE INDEX idx_sys_menu_pc ON js_sys_menu (parent_code);
 CREATE INDEX idx_sys_menu_ts ON js_sys_menu (tree_sort);
 CREATE INDEX idx_sys_menu_status ON js_sys_menu (status);
